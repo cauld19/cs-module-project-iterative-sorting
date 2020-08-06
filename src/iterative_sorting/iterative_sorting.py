@@ -13,11 +13,26 @@ def selection_sort(arr):
 
 
 # TO-DO:  implement the Bubble Sort function below
+
+# def bubble_sort(arr): ## most basic bubble sort
+#     for j in range(0, len(arr) - 1): ## loop through until array is sorted
+#         for i in range(0, len(arr) - 1): ## perform loop to bubble high number to right
+#             if arr[i] > arr[i + 1]: 
+#                 arr[i], arr[i + 1] = arr[i + 1], arr[i] 
+#     return arr
+
 def bubble_sort(arr):
-    # Your code here
+    sorted = False ## set variable sorted to False
+    while not sorted: ## while loop to work until sorted is True
+        sorted = True ## set sorted to True
+        for i in range(0, len(arr) - 1): ## loop through elements
+            if arr[i] > arr[i + 1]: ## compare element to element nextin line
+                sorted = False ## reset sorted to False
+                arr[i], arr[i + 1] = arr[i + 1], arr[i] ## swap values
 
 
-    return arr
+    return arr ## return array
+
 
 '''
 STRETCH: implement the Counting Sort function below
